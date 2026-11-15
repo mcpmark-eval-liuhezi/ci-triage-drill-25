@@ -1,0 +1,13 @@
+name: CI Drill
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print DRILL-FAIL marker and fail
+        run: |
+          echo "DRILL-FAIL"
+          exit 1
